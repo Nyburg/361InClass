@@ -1,10 +1,30 @@
 #Fixing Dylan's (#9)
 
-str = "Happy Birthday Nick"
-count = 0
-vowels = "aeiouy"
-vowelsCount = 0
+def countVowels(str, vowels)
+  count = 0
+  str.each_char {|c| count += 1 if vowels.include?(c) }
+  count
+end
 
+def removeVowels(str, vowels)
+  newStr = ""
+  str.each_char { |c| newStr += c unless vowels.include?(c) }
+  newStr
+end
+
+str = "Happy Birthday Nick"
+vowels = "aeiouy"
+
+puts countVowels(str, vowels)
+
+str <<= ", you smell like a monkey"
+puts countVowels(str, vowels)
+
+str = removeVowels(str, vowels)
+puts str
+puts countVowels(str, vowels)
+
+=begin
 str.each_char do |c|
   vowels.each_char do |i|
     if (c==i)
@@ -50,3 +70,5 @@ str.each_char do |c|
   end
 end
 puts vowelsCount
+
+=end

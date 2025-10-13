@@ -1,1 +1,2 @@
 # 361InClass
+    Using functions in this case greatly decreases the amount of code that needs to be written, because almost all of it is the same operation just with different strings. It also lowers the chance of messing up variable names, because if they're only taken as an argument once and used in the same loop multiple times, it will work every time. 
